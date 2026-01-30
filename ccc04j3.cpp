@@ -1,27 +1,23 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
-    int a, b, height; cin >> a >> b >> height;
-    for(int i = 0; i < a; i++){
-        for(int i = 0; i < 3; i++){
-            cout << "*";
-            if (i < 2){
-                for(int i = 0; i < b; i++){
-                    cout << " ";
-                }
-            }
-        }
-        cout << "\n";
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n, m;
+    cin >> n >> m;
+    string adj[n];
+    string noun[m];
+    for(int i = 0; i < n; i++){
+        cin >> adj[i];
     }
-    for(int i = 0; i < b*2+3; i++){
-        cout << "*";
+    for(int i = 0; i < m; i++){
+        cin >> noun[i];
     }
-    cout << "\n";
-    for(int i = 0; i < height; i++){
-        for(int i = 0; i <= b; i++){
-            cout << " ";
+    for(int i = 0; i < n; i ++){
+        for(int j = 0; j < m; j++){
+            cout << adj[i] << " as " << noun[j] << "\n";
         }
-        cout << "*" << "\n";
     }
 }
